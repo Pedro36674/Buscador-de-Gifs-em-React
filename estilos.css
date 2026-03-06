@@ -1,0 +1,41 @@
+body{
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.buscador-input {
+    text-align: center;
+    padding: 20px;
+}
+
+.buscador{
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 0px .2rem #ffffff;
+    border: none;
+}
+
+.buscador:focus-visible{
+    outline: none;
+}
+.gif{
+    border-radius: 10px;
+    width: 300px;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    margin: 3px;
+}
+
+.conteiner-gifs{
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+h2{
+    color:#ffffff;
+    font-family: sans-serif;
+}
