@@ -1,16 +1,43 @@
-# React + Vite
+# Buscador de GIFs
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma aplicação React criada com Vite que permite pesquisar GIFs usando a API do Giphy.
 
-Currently, two official plugins are available:
+## Visão geral
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A aplicação exibe um campo de busca para o usuário digitar um termo e, ao enviar, realiza a requisição à API para carregar GIFs relacionados. Durante a busca, é exibida uma mensagem de carregamento.
 
-## React Compiler
+## Arquivos principais
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `src/App.jsx` - Componente principal que organiza o layout e usa o hook personalizado `useSearchGifs`.
+- `src/useSearchGifs.js` - Hook personalizado responsável pela lógica de estado, busca dos GIFs e controle de carregamento.
+- `src/Buscador.jsx` - Componente de formulário para capturar o texto da pesquisa e enviar a busca.
+- `src/GridGifs.jsx` - Componente que renderiza a lista de GIFs retornados pela busca.
+- `src/Gif.jsx` - Componente que exibe cada GIF individualmente com animação ao aparecer e efeito de hover.
+- `src/estilos.css` - Estilos básicos para o layout e visual dos componentes.
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Busca de GIFs pela API do Giphy
+- Mostra indicador de carregamento enquanto a pesquisa é realizada
+- Renderiza resultados em grade de imagens animadas
+- Usa componentes e hooks reutilizáveis
+
+## Como executar
+
+1. Instale as dependências:
+
+```bash
+npm install
+```
+
+2. Inicie o servidor de desenvolvimento:
+
+```bash
+npm run dev
+```
+
+3. Abra o navegador no endereço mostrado no terminal.
+
+## Observações
+
+A lógica de busca está organizada em `src/useSearchGifs.js`, e a exibição dos resultados é feita pelo conjunto de componentes em `src/GridGifs.jsx` e `src/Gif.jsx`.
